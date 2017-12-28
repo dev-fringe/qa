@@ -20,12 +20,12 @@ public class App implements InitializingBean {
 	}
 
 	public void afterPropertiesSet() throws Exception {
-	    String baseUrl = "https://10.0.42.26:9043";
+	    String baseUrl = "https://127.0.0.1:9043";
 	    driver.get(baseUrl + "/ibm/console/logon.jsp");
 	    driver.findElement(By.id("j_username")).clear();
-	    driver.findElement(By.id("j_username")).sendKeys("kumjs");
+	    driver.findElement(By.id("j_username")).sendKeys("dev");
 	    driver.findElement(By.id("j_password")).clear();
-	    driver.findElement(By.id("j_password")).sendKeys("u9bU8pil");
+	    driver.findElement(By.id("j_password")).sendKeys("fringe");
 	    driver.findElement(By.id("other")).click();
 	    driver.switchTo().frame("navigation");
 	    driver.findElement(By.linkText("Servers")).click();
